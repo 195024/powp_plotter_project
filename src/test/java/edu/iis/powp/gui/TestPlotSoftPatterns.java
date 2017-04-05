@@ -50,6 +50,12 @@ public class TestPlotSoftPatterns
 		IPlotter plotter = new DrawPanelControllerAdapter(ApplicationWithDrawer.getDrawPanelController());
 		context.addDriver("Buggy Simulator", plotter);
 		
+		IPlotter dottedLinePlotter = new LinePlotterAdapter(LineFactory.getDottedLine(), ApplicationWithDrawer.getDrawPanelController());
+		context.addDriver("Dotted Line Simulator", dottedLinePlotter);
+		
+		IPlotter specialLinePlotter = new LinePlotterAdapter(LineFactory.getSpecialLine(), ApplicationWithDrawer.getDrawPanelController());
+		context.addDriver("Special Line Simulator", specialLinePlotter);
+		
 		context.updateDriverInfo();
 	}
 
