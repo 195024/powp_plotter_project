@@ -10,11 +10,11 @@ import edu.kis.powp.drawer.shape.LineFactory;
 /**
  * Plotter adapter to drawer with several bugs. 
  */
-public class DrawPanelControllerAdapterForIPlotter extends DrawPanelController implements IPlotter
+public class DrawPanelControllerAdapter extends DrawPanelController implements IPlotter
 { 
 	private int startX = 0, startY = 0;
 	
-    public DrawPanelControllerAdapterForIPlotter(Context context) {
+    public DrawPanelControllerAdapter(Context context) {
 		super();
 		this.initialize(context.getFreePanel());
 	}
