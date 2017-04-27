@@ -15,6 +15,8 @@ import edu.iis.powp.app.DriverManager;
 import edu.iis.powp.appext.ApplicationWithDrawer;
 import edu.iis.powp.events.predefine.SelectChangeVisibleOptionListener;
 import edu.iis.powp.events.predefine.SelectTestFigureOptionListener;
+import edu.iis.powp.figures.RectangleFactory;
+import edu.iis.powp.figures.SquareFactory;
 import edu.kis.powp.drawer.panel.DefaultDrawerFrame;
 import edu.kis.powp.drawer.panel.DrawPanelController;
 import edu.kis.powp.drawer.shape.LineFactory;
@@ -32,9 +34,13 @@ public class TestPlotSoftPatterns
 	private static void setupPresetTests(Context context) {
 	    SelectTestFigureOptionListener selectTestFigureOptionListener1 = new SelectTestFigureOptionListener(1);
 	    SelectTestFigureOptionListener selectTestFigureOptionListener2 = new SelectTestFigureOptionListener(2);
-	    
+	    SelectTestFigureOptionListener selectTestFigureOptionListener3 = new SelectTestFigureOptionListener(3, 100, 175);
+	    SelectTestFigureOptionListener selectTestFigureOptionListener4 = new SelectTestFigureOptionListener(4, 100);
+
 		context.addTest("Figure Joe 1", selectTestFigureOptionListener1);
 		context.addTest("Figure Joe 2", selectTestFigureOptionListener2);
+		context.addTest("Rectangle", selectTestFigureOptionListener3);
+		context.addTest("Square", selectTestFigureOptionListener4);
 	}
 
 	/**
@@ -104,6 +110,7 @@ public class TestPlotSoftPatterns
             	setupDrivers(context);
             	setupPresetTests(context);
             	setupLogger(context);
+            	
             }
 
         });
